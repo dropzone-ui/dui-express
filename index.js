@@ -69,7 +69,7 @@ app.post("/upload-my-file", async (req, res) => {
 });
 app.get("/download/:fileName", function (req, res) {
   try {
-   const { fileName } = req.path;
+   const { fileName } = req.params;
    console.log("file name: ", fileName);
     const file = `${__dirname}/uploads/${fileName}`;
     res.download(file); // Set disposition and send it.
