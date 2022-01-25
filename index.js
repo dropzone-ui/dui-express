@@ -45,7 +45,7 @@ app.post("/upload-my-file", async (req, res) => {
       //send response
       res.send({
         status: true,
-        message: "File was uploaded successfully",
+        message: "File was uploaded successfully on dui server",
         payload: {
           name: file.name,
           mimetype: file.mimetype,
