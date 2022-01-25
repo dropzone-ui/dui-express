@@ -42,7 +42,8 @@ app.post("/upload-my-file", async (req, res) => {
       //Use the name of the input field (i.e. "file") to retrieve the uploaded file
       let file = req.files.file;
       //Use the mv() method to place the file in upload directory (i.e. "uploads")
-      const uploadLocation=`${__dirname}/uploads/${file.name}`
+      const uploadLocation=`${__dirname}/uploads/${file.name}`;
+      console.log("destnation: ", uploadLocation);
       //file.mv("./uploads/" + file.name);
       file.mv(uploadLocation);
       //send response

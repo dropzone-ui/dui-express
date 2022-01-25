@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "deploy": "git push heroku HEAD:master"
+    "deploy": "git push heroku HEAD:master",
+    "logs": "heroku logs --tail"
   },
   "keywords": [],
   "author": "",
