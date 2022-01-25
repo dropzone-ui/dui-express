@@ -50,7 +50,7 @@ app.post("/upload-my-file", async (req, res) => {
           name: file.name,
           mimetype: file.mimetype,
           size: file.size,
-          path: "/files/uploads/",
+          path: "/files/",
           url: "https://my-ftp-server.com/bjYJGFYgjfVGHVb",
         },
       });
