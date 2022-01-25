@@ -63,3 +63,15 @@ app.post("/upload-my-file", async (req, res) => {
     });
   }
 });
+app.get("/download", function (req, res) {
+  try {
+    const file = `${__dirname}/uploads/${fileName}`;
+    res.download(file); // Set disposition and send it.
+  } catch (error) {
+    res.status(500).send({
+      status: false,
+      message: "Error on downloading",
+      payload: {},
+    });
+  }
+});
