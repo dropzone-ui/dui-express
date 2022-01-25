@@ -22,12 +22,12 @@ app.listen(port, () => console.log(`App is listening on port ${port}.`));
 app.get("/", (req, res) => {
   res.json({ response: "HAAAAAAAAAAAAAAAAAAAAAAAAAA" });
 });
-app.get("/getAll", async (req,res) => {
-  const testFolder = __dirname;
+app.get("/getAll", async (req, res) => {
+  const testFolder = `${__dirname}/uploads`;
   let files = [];
 
   files = await fs.readdirSync(testFolder);
-  res.json(files );
+  res.json(files);
 });
 app.post("/upload-my-file", async (req, res) => {
   try {
