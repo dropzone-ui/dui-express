@@ -1,5 +1,5 @@
 <p align="center">
-<img align="center" with="256px" height="256px" src="https://user-images.githubusercontent.com/43678736/132112022-0ca409ae-cca2-43c8-be89-110376260a3f.png" alt="dropone-ui-logo">
+<img align="center" with="128px" height="128px" src="https://user-images.githubusercontent.com/43678736/132112022-0ca409ae-cca2-43c8-be89-110376260a3f.png" alt="dropone-ui-logo">
 
 <h1 align="center">  Dropzone UI (express server-side)</h1>
 
