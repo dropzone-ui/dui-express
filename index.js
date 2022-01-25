@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const _ = require("lodash");
 const fs = require("fs");
+//const { dirname } = require("path");
 const app = express();
 
 // enable files upload
@@ -41,7 +42,9 @@ app.post("/upload-my-file", async (req, res) => {
       //Use the name of the input field (i.e. "file") to retrieve the uploaded file
       let file = req.files.file;
       //Use the mv() method to place the file in upload directory (i.e. "uploads")
-      file.mv("./uploads/" + file.name);
+      const uploadLocation=`${__dirname}/uploads/${file.name}`
+      //file.mv("./uploads/" + file.name);
+      file.mv(uploadLocation);
       //send response
       res.send({
         status: true,
@@ -65,7 +68,8 @@ app.post("/upload-my-file", async (req, res) => {
 });
 app.get("/download/:fileName", function (req, res) {
   try {
-    const {fileName} = req.path;
+   const { fileName } = req.path;
+   console.log("file name: ", fileName);
     const file = `${__dirname}/uploads/${fileName}`;
     res.download(file); // Set disposition and send it.
   } catch (error) {
