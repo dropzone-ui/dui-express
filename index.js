@@ -63,8 +63,9 @@ app.post("/upload-my-file", async (req, res) => {
     });
   }
 });
-app.get("/download", function (req, res) {
+app.get("/download/:fileName", function (req, res) {
   try {
+    const {fileName} = req.path;
     const file = `${__dirname}/uploads/${fileName}`;
     res.download(file); // Set disposition and send it.
   } catch (error) {
