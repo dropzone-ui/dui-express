@@ -9,6 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
+    "fastdeploy": "git add . && git commit -m 'updates' && git push heroku HEAD:master",
     "deploy": "git push heroku HEAD:master",
     "logs": "heroku logs --tail"
   },
