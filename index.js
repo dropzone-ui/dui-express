@@ -36,7 +36,7 @@ app.post("/upload-my-file", async (req, res) => {
       res.send({
         status: false,
         message: "No file uploaded",
-        payload: {},
+        payload: {}
       });
     } else {
       //Use the name of the input field (i.e. "file") to retrieve the uploaded file
@@ -56,7 +56,7 @@ app.post("/upload-my-file", async (req, res) => {
           size: file.size,
           path: "/files/",
           url: "https://my-ftp-server.com/bjYJGFYgjfVGHVb",
-        },
+        }
       });
     }
   } catch (err) {
