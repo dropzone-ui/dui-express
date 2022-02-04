@@ -63,7 +63,7 @@ app.post("/upload-my-file", async (req, res) => {
     res.status(500).send({
       status: false,
       message: "Unspected problem",
-      payload: {},
+      payload: {}
     });
   }
 });
