@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
   res.json({ response: "HAAAAAAAAAAAAAAAAAAAAAAAAAA" });
 });
 app.get("/getAll", async (req, res) => {
-  const testFolder = `${__dirname}`;
+  const testFolder = `${__dirname}/uploads`;
   let files = [];
 
   files = await fs.readdirSync(testFolder);
